@@ -1,0 +1,41 @@
+└──(Black)500
+    ├──(Black)777
+    │   ├──(Black)821
+    │   │   ├──(Red)1231
+    │   │   │   ├──(Black)NULL
+    │   │   │   └──(Black)NULL
+    │   │   └──(Red)778
+    │   │       ├──(Black)NULL
+    │   │       └──(Black)NULL
+    │   └──(Black)639
+    │       ├──(Black)NULL
+    │       └──(Red)566
+    │           ├──(Black)NULL
+    │           └──(Black)NULL
+    └──(Red)25
+        ├──(Black)267
+        │   ├──(Red)325
+        │   │   ├──(Black)344
+        │   │   │   ├──(Red)404
+        │   │   │   │   ├──(Black)NULL
+        │   │   │   │   └──(Black)NULL
+        │   │   │   └──(Red)340
+        │   │   │       ├──(Black)NULL
+        │   │   │       └──(Black)NULL
+        │   │   └──(Black)298
+        │   │       ├──(Black)NULL
+        │   │       └──(Black)NULL
+        │   └──(Black)225
+        │       ├──(Black)NULL
+        │       └──(Black)NULL
+        └──(Black)5
+            ├──(Black)7
+            │   ├──(Black)NULL
+            │   └──(Red)6
+            │       ├──(Black)NULL
+            │       └──(Black)NULL
+            └──(Black)1
+                ├──(Black)NULL
+                └──(Black)NULL
+
+

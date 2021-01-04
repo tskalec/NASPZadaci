@@ -1,0 +1,53 @@
+└──(Black)0015
+    ├──(Black)0037
+    │   ├──(Red)0045
+    │   │   ├──(Black)0474
+    │   │   │   ├──(Red)0676
+    │   │   │   │   ├──(Black)NULL
+    │   │   │   │   └──(Black)NULL
+    │   │   │   └──(Red)0404
+    │   │   │       ├──(Black)NULL
+    │   │   │       └──(Black)NULL
+    │   │   └──(Black)0038
+    │   │       ├──(Black)NULL
+    │   │       └──(Black)NULL
+    │   └──(Red)0030
+    │       ├──(Black)0035
+    │       │   ├──(Black)NULL
+    │       │   └──(Black)NULL
+    │       └──(Black)0025
+    │           ├──(Black)NULL
+    │           └──(Black)NULL
+    └──(Red)0002
+        ├──(Black)0004
+        │   ├──(Black)0010
+        │   │   ├──(Black)NULL
+        │   │   └──(Black)NULL
+        │   └──(Black)0003
+        │       ├──(Black)NULL
+        │       └──(Black)NULL
+        └──(Black)-303
+            ├──(Red)-7
+            │   ├──(Black)0000
+            │   │   ├──(Black)NULL
+            │   │   └──(Black)NULL
+            │   └──(Black)-5
+            │       ├──(Black)NULL
+            │       └──(Red)-37
+            │           ├──(Black)NULL
+            │           └──(Black)NULL
+            └──(Red)-22
+                ├──(Black)-25
+                │   ├──(Red)-288
+                │   │   ├──(Black)NULL
+                │   │   └──(Black)NULL
+                │   └──(Red)-23
+                │       ├──(Black)NULL
+                │       └──(Black)NULL
+                └──(Black)-1
+                    ├──(Red)-21
+                    │   ├──(Black)NULL
+                    │   └──(Black)NULL
+                    └──(Black)NULL
+
+

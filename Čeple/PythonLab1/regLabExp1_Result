@@ -1,0 +1,213 @@
+    def test_one(self, capsys, test_tree):
+        """
+        This test tests a concrete red-black tree!
+
+        :param capsys: Used for capturing and testing stdout
+        :return:  nothing, this is a test method
+        """
+        test_tree.display_null_leaves = True
+
+        assert test_tree.get_size() == 0
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)NULL\n"
+
+        test_tree.add_node("0025")
+        assert test_tree.get_size() == 1
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0025 \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("0025")
+        assert test_tree.get_size() == 1
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0025 \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("0004")
+        assert test_tree.get_size() == 2
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0025 \n(R)0004 (B)NULL \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("0025")
+        assert test_tree.get_size() == 2
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0025 \n(R)0004 (B)NULL \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("0004")
+        assert test_tree.get_size() == 2
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0025 \n(R)0004 (B)NULL \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("0004")
+        assert test_tree.get_size() == 2
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0025 \n(R)0004 (B)NULL \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("0003")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0003")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0004")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0025")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0003")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0003")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0004")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0025")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0003")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0003")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0004")
+        assert test_tree.get_size() == 3
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(R)0003 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0010")
+        assert test_tree.get_size() == 4
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(B)0003 (B)0025 \n(B)NULL (B)NULL (R)0010 (B)NULL \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("0015")
+        assert test_tree.get_size() == 5
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(B)0003 (B)0015 \n(B)NULL (B)NULL (R)0010 (R)0025 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0030")
+        assert test_tree.get_size() == 6
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(B)0003 (R)0015 \n(B)NULL (B)NULL (B)0010 (B)0025 \n(B)NULL (B)NULL (B)NULL (R)0030 \n" \
+                      "(B)NULL (B)NULL \n"
+
+        test_tree.add_node("0035")
+        assert test_tree.get_size() == 7
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0004 \n(B)0003 (R)0015 \n(B)NULL (B)NULL (B)0010 (B)0030 \n(B)NULL (B)NULL (R)0025 (R)0035 \n" \
+                      "(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0045")
+        assert test_tree.get_size() == 8
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(R)0004 (R)0030 \n(B)0003 (B)0010 (B)0025 (B)0035 \n(B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(B)NULL (R)0045 \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("0037")
+        assert test_tree.get_size() == 9
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(R)0004 (R)0030 \n(B)0003 (B)0010 (B)0025 (B)0037 \n(B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(R)0035 (R)0045 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        # Time for some duplicates testing
+        test_tree.add_node("0037")
+        assert test_tree.get_size() == 9
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(R)0004 (R)0030 \n(B)0003 (B)0010 (B)0025 (B)0037 \n(B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(R)0035 (R)0045 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0025")
+        assert test_tree.get_size() == 9
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(R)0004 (R)0030 \n(B)0003 (B)0010 (B)0025 (B)0037 \n(B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(R)0035 (R)0045 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0015")
+        assert test_tree.get_size() == 9
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(R)0004 (R)0030 \n(B)0003 (B)0010 (B)0025 (B)0037 \n(B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(R)0035 (R)0045 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0004")
+        assert test_tree.get_size() == 9
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(R)0004 (R)0030 \n(B)0003 (B)0010 (B)0025 (B)0037 \n(B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(R)0035 (R)0045 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        test_tree.add_node("0037")
+        assert test_tree.get_size() == 9
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(R)0004 (R)0030 \n(B)0003 (B)0010 (B)0025 (B)0037 \n(B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(R)0035 (R)0045 \n(B)NULL (B)NULL (B)NULL (B)NULL \n"
+
+        # Continue adding!
+        test_tree.add_node("0038")
+        assert test_tree.get_size() == 10
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(B)0004 (B)0030 \n(B)0003 (B)0010 (B)0025 (R)0037 \n(B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(B)0035 (B)0045 \n(B)NULL (B)NULL (R)0038 (B)NULL \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("-22")
+        assert test_tree.get_size() == 11
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(B)0004 (B)0030 \n(B)0003 (B)0010 (B)0025 (R)0037 \n(R)-22 (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(B)0035 (B)0045 \n(B)NULL (B)NULL (B)NULL (B)NULL (R)0038 (B)NULL \n(B)NULL (B)NULL \n"
+
+        test_tree.add_node("-1")
+        assert test_tree.get_size() == 12
+        test_tree.bfs_traversal()
+        out, err = capsys.readouterr()
+        assert out == "(B)0015 \n(B)0004 (B)0030 \n(B)-22 (B)0010 (B)0025 (R)0037 \n(R)-1 (R)0003 (B)NULL (B)NULL (B)NULL (B)NULL " \
+                      "(B)0035 (B)0045 \n(B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (B)NULL (R)0038 (B)NULL \n(B)NULL (B)NULL \n"
