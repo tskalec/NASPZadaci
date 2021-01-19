@@ -1,0 +1,8 @@
+1. Potrebno je skinuti ili klonirati kod OpenNN biblioteke. (https://github.com/Artelnics/opennn)
+2. Otvoriti terminal unutar vršnog foldera skinutog/kloniranog foldera.
+3. Upisati u terminal "CMAKE ." (bez navodnika).
+4. Prekopirati genetic_neural_net_optimizer.cpp i sin_function.csv u "blank" folder unutar opennn foldera
+   (opcionalno izbrisati main.cpp koji se nalazi u folderu /opennn/blank
+5. Pokrenuti opennn.sln i runnati program iz blank foldera. 
+
+Dodatno: program podržava i ostale datasetove (s varijabilnim brojem ulaznih varijabli). 
