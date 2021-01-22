@@ -10,12 +10,12 @@ class Node:
 
 class SkipList:
 
-    def __init__(self):
-        self.maxHeight = 120
+    def __init__(self, maxHeight=100, chance=0.5):
+        self.maxHeight = maxHeight
         self.head = Node(height=self.maxHeight)
         self.len = 0
         self.minHeight = 0
-        self.chance = 0.5
+        self.chance = chance
         self.listHeight = 0
 
     def __len__(self):
@@ -51,6 +51,7 @@ class SkipList:
                 if update[i] and update[i].next[i] != temp:
                     break
                 update[i].next[i] = temp.next[i]
+        self.len -=1
 
 
 
@@ -93,7 +94,7 @@ class SkipList:
 
 
 if __name__ == '__main__':
-    l = SkipList()
+    l = SkipList(100,0.5)
     l.insert(5)
     l.printList()
     l.insert(10)
@@ -104,7 +105,9 @@ if __name__ == '__main__':
     l.printList()
     l.insert(6)
     l.printList()
+    #print(len(l))
     l.remove(5)
+    #print(len(l))
     l.printList()
     print(f"is 7 in the list ? {l.find(7)}")
     l.remove(7)
