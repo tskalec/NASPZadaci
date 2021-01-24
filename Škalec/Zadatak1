@@ -1,0 +1,99 @@
+# -*- coding: utf-8 -*-
+"""
+**Zadatak: uravnotežavanje stabla promišljenim redoslijedom upisa podataka**
+
+1. Prikupiti (unijeti) podatke
+2. Sortirati podatke
+3. Središnji element uzeti kao korijen stabla
+4. Središnji elementi lijevog i desnog podniza postaju njegova djeca
+5. Rekurzivno ponavljati treći i četvrti korak dok ima podatka
+
+6. Napisati testove! :)
+
+Autor: Tena Škalec, 0036460611
+
+Klasa TreeNode sadrži konstruktor te funkcije za umetanje podataka i ispis stabla.
+
+Ako je sve napravljeno kako treba, podaci će se ispisati redom od najmanjeg do najvećeg.
+"""
+
+class TreeNode:
+  def __init__(self, data):
+    self.left_node = None
+    self.right_node = None
+    self.data = data
+
+  def insert(self, data):
+    # prazan list
+    if self.data is None:
+      self.data = data
+
+    # put niz stablo do praznog lista za upis
+    else:
+      if data < self.data:
+        if self.left_node is None:
+          self.left_node = TreeNode(data)
+        else:
+          self.left_node.insert(data)
+      else:
+        if self.right_node is None:
+          self.right_node = TreeNode(data)
+        else:
+          self.right_node.insert(data)
+
+  def print_tree(self):
+    if (self.left_node):
+      self.left_node.print_tree()
+    print(self.data)
+    if (self.right_node):
+      self.right_node.print_tree()
+
+"""Rekurzivna funkcija za dodavanje elementa u stablo (algoritam iz prezentacije 2, slajd 10).
+
+"""
+
+def make_bal_tree(root, data):
+    if (len(data)):
+      middle = max(int((len(data) / 2)) - 1, 0)
+      root.insert(data[middle])
+
+      left = data[0:middle]
+      right = data[middle+1:]
+
+      make_bal_tree(root, left)
+      make_bal_tree(root, right)
+
+    return root
+
+"""Imamo potrebne klase i funkcije!
+
+Unos podataka i sortiranje:
+"""
+
+def is_valid_int(value):
+    try:
+      int(value)
+      return True
+    except ValueError:
+        return False
+
+input_value = 0
+values = set()
+
+while (input_value != 'K'):
+  input_value = input('Unijeti integer 4element stabla ili \'K\' za kraj unosa: ')
+  if (input_value != 'K'):
+    if is_valid_int(input_value):
+      values.add(input_value)
+
+print(values)
+
+values = sorted(values)
+print(values)
+
+"""Sortirane vrijednosti predajemo funkciji za upis podataka u stablo. 
+
+"""
+
+tree = make_bal_tree(TreeNode(None), values)
+tree.print_tree()
